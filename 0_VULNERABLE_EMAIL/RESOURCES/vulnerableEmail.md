@@ -1,4 +1,5 @@
-VULNERABILTY__
+ ```bash 
+ VULNERABILTY__
     => There is no Client-Site Validation for the form.
     => The email input field has a default value.
     => Email input field is not of  attribute type email, i.e) email must be of  type="email".
@@ -14,3 +15,4 @@ EXPLOIT_?
 SOLUTION__
     => Implement client-site, validation and server-site(optional) validation.
     =>
+    ```
