@@ -49,6 +49,7 @@ SOLUTION:
                         txtCit = getRequestString("City");
                         txtSQL = "INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)";
                         db.Execute(txtSQL,txtNam,txtAdd,txtCit);
+                        
                         ```
 
     => use prepared statements  and  stored procedure                              
