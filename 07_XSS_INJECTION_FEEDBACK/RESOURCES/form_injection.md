@@ -53,6 +53,7 @@ REFERRENCE__
 ```
 
         ```bash 
+        https://www.netsparker.com/blog/web-security/protecting-website-using-anti-csrf-token/
         #how to create a simple Anti-CSRF in PHP
 
         #create the  Anti-CSRF token
