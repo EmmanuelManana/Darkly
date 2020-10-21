@@ -16,7 +16,7 @@ CSRF attacks are effective in a number of situations, including:
     * The victim is authenticated via HTTP auth on the target site.
     * The victim is on the same local network as the target site.
 
-CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.
+CSRF has primarily been used to perform an action against a target site using the victims privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.
 
 
 SOLUTION__
@@ -49,6 +49,23 @@ REFERRENCE__
         http://cwe.mitre.org/data/definitions/352.html
 
         http://breakthesecurity.cysecurity.org/2012/02/complete-cross-site-scriptingxss-cheat-sheets-part-1.html
+
+```
+
+        ```bash 
+        #how to create a simple Anti-CSRF in PHP
+
+        #create the  Anti-CSRF token
+            $_SESSION['token'] = bin2hex(random_bytes(24)); 
+
+        #verify the token 
+            if (hash_equals($_SESSION['token'], $_POST['token'])) {
+            // Action if token is valid
+            } else {
+            // Action if token is invalid
+            }
+
+        ```
 
 
 
